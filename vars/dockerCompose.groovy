@@ -1,6 +1,6 @@
 println [:]
 
-def up() {
+this.up = {
     println "up!"
 }
 
