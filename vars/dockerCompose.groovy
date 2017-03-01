@@ -1,7 +1,11 @@
-println [:]
+class dockerCompose {
+  def up(body) {
+    // evaluate the body block, and collect configuration into the object
+    def config = [:]
+    body.resolveStrategy = Closure.DELEGATE_FIRST
+    body.delegate = config
+    body()
 
-this.up = {
-    println "up!"
+    println "UP!"
+  }
 }
-
-return this
