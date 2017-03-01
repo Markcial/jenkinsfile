@@ -4,4 +4,4 @@ this.up = {
     println "up!"
 }
 
-return $this
+return this
