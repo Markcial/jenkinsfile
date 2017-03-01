@@ -1,5 +1,5 @@
 def composer(options) {
-  def sshSocket = file(env.SSH_AUTH_SOCK)
+  def sshSocket = new File(env.SSH_AUTH_SOCK)
   def args = ['-v ${env.WORKSPACE}:/app']
   if(sshSocket.exists()) {
     args = [
