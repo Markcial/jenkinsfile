@@ -1,12 +1,7 @@
-class DockerCompose {
-    def DockerCompose(options) {
-        println options
-        println "New DockerCompose"
-    }
+println [:]
+
+def up() {
+    println "up!"
 }
 
-def call(options) {
-    return new DockerCompose(options);
-}
-
-return call([]);
+return $this
