@@ -1,4 +1,7 @@
 def call(options) {
-  println "Hello"
-  println options
+  // evaluate the body block, and collect configuration into the object
+  def config = [:]
+  body.resolveStrategy = Closure.DELEGATE_FIRST
+  body.delegate = config
+  body()
 }
